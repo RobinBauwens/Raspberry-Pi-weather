@@ -1,0 +1,1 @@
+# Dit is een project om weerdata (luchtdruk, temperatuur, luchtvochtigheid, etc.) te verzamelen met een Raspberry Pi 3.
