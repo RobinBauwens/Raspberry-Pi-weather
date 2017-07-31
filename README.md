@@ -6,4 +6,5 @@
 
 
 [Tutorial](https://www.youtube.com/watch?v=aEnS0-Jy2vE)
+
 [Geschreven handleiding](http://www.circuitbasics.com/raspberry-pi-ds18b20-temperature-sensor-tutorial/)
