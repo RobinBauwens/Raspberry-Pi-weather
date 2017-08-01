@@ -8,4 +8,4 @@
 
 [MySQL via PHP naar JSON](https://www.youtube.com/watch?v=CZ8PdfVZTCQ)
 
-[Export output MySQL-query via PHP naar JSON](https://www.youtube.com/watch?v=78FAtAcLvqY)
+[Export output MySQL-query via PHP naar JSON](https://www.youtube.com/watch?v=78FAtAcLvqY) **Vergeet niet om een bestand `weatherdata.json` te maken met eventueel 777 rechten.**
