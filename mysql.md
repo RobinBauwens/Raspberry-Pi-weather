@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `WeatherData` (
   `ID` int(255) NOT NULL AUTO_INCREMENT,
   `Temperature` double NOT NULL,
   `Humidity` varchar(20) NOT NULL,
-  `DateMeasured` date NOT NULL,
-  `HourMeasured` int(128) NOT NULL,
+  `Date` date NOT NULL,
+  `Hour` int(128) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
