@@ -4,9 +4,9 @@
 
 `create database WeatherStation;`
 
-`use weatherstation`
+`use WeatherStation;`
 
-`create table WeatherData(ID INTEGER AUTO_INCREMENT PRIMARY KEY, Temperature Double, Humidity Double, Date DATE)`
+`create table WeatherData(ID INTEGER AUTO_INCREMENT PRIMARY KEY, Date DATE, Time TIME, Temperature Double, Humidity Double);`
 
 ### Andere
 `ALTER TABLE WeatherData ADD COLUMN ID INTEGER AUTO_INCREMENT UNIQUE KEY;`
@@ -15,7 +15,7 @@
 
 
 ### Voorbeeld van INSERT
-`insert into WeatherData values (24,90,CURDATE(),1);`
+`insert into WeatherData values (1,CURDATE(),CURTIME(),24,90);`
 
 
 ### Verander DB database1 naam naar database2
