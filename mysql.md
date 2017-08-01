@@ -22,3 +22,7 @@
 If you want to drop database1 otherwise leave it.
 
 `mysql> DROP DATABASE database1;`
+
+
+
+[Toon alle kolommen van tabellen binnen DB](https://stackoverflow.com/questions/5648420/get-all-columns-from-all-mysql-tables)
