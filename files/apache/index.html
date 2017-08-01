@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script
+  src="http://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+window.onload = function () {
+var dataPoints = [];
+$.getJSON("weatherdata.json", function(data) {
+        $.each(data, function(key, value){
+                console.log(value);
+                console.log(value.ID);
+                console.log(value.Timestamp);
+                console.log(value.Temperature);
+                dataPoints.push({x:1  , y:5 });
+        alert(dataPoints[0].ID);
+        });
+        var chart = new CanvasJS.Chart("chartContainer",{
+                title:{
+                        text:"Rendering Chart with dataPoints from External JSON"
+                },
+                data: [{
+                        type: "line",
+                        dataPoints : dataPoints,
+                }]
+        });
+        chart.render();
+});
+}
+</script>
+
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+</html>
