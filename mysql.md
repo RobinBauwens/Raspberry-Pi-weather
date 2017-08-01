@@ -30,3 +30,14 @@ If you want to drop database1 otherwise leave it.
 `mysql> DROP DATABASE database1;`
 
 [Toon alle kolommen van tabellen binnen DB](https://stackoverflow.com/questions/5648420/get-all-columns-from-all-mysql-tables)
+
+
+
+CREATE TABLE IF NOT EXISTS `WeatherData` (
+  `ID` int(255) NOT NULL AUTO_INCREMENT,
+  `Temperature` double NOT NULL,
+  `Humidity` varchar(20) NOT NULL,
+  `DateMeasured` date NOT NULL,
+  `HourMeasured` int(128) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
