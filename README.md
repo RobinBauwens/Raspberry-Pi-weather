@@ -32,10 +32,13 @@
 /- Omzetten van int naar float/double in javascript + MySQL, ...
 -->
 
-** Maak ook een crontab via `crontab -e`:**
+**Maak ook een crontab via `crontab -e`:**
 
 `TZ="Europe/Brussels"`
 
 `0,30 * * * * /usr/bin/python /home/pi/mysqltest.py`
+
+
+Vul/pas `mysql.md` verder aan + naamgeving `mysqltest.py` aanpassen.
 
 
