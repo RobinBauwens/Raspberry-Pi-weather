@@ -58,8 +58,7 @@ $.getJSON("weatherdata.json", function(data) {
                 },
 
 		 axisX:{
-                        title: "Timestamp",
-			valueFormatString: "HH:mm:ss" 
+                        title: "Timestamp"
                 },
 
 		axisY:{
@@ -69,8 +68,7 @@ $.getJSON("weatherdata.json", function(data) {
 		data: [{
                         type: "line",
                         dataPoints : dataPoints,
-			indexLabel: "{y} °C", 
-			toolTipContent: "Datum= {x} </br> Temperatuur= {y} °C"	 
+			indexLabel: "{y} °C" 
                 }]
         });
         chart.render();
@@ -96,19 +94,17 @@ var chart2 = new CanvasJS.Chart("chartContainer2",{
                 },
 
                  axisX:{
-                        title: "Timestamp",
-			valueFormatString: "HH:mm:ss" 
+                        title: "Timestamp"
                 },
 
                 axisY:{
                         title: "Vochtigheid (in procent)",
-			suffix: " %",
+			suffix: " %"
                 },
                 data: [{
                         type: "line",
                         dataPoints : dataPoints2,
-			indexLabel: "{y} %",
-			toolTipContent: "Datum= {x} </br> Vochtigheid= {y} %"	 
+			indexLabel: "{y} %" 
                 }]
         });
 
