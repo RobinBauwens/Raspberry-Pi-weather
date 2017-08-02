@@ -10,4 +10,6 @@
 
 [Export output MySQL-query via PHP naar JSON](https://www.youtube.com/watch?v=78FAtAcLvqY) **Vergeet niet om een bestand `weatherdata.json` te maken met eventueel 777 rechten.**
 
-[Omvorming Date-formaat JS][https://stackoverflow.com/questions/3075577/convert-mysql-datetime-stamp-into-javascripts-date-format)
+[Omvorming Date-formaat JS](https://stackoverflow.com/questions/3075577/convert-mysql-datetime-stamp-into-javascripts-date-format)
+
+[HTML in PHP](https://www.ntchosting.com/encyclopedia/scripting-and-programming/php/php-in/)
