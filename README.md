@@ -23,3 +23,9 @@
 - [AM2302](https://www.sossolutions.nl/393-am2302-wired-dht22-temperature-humidity-sensor)
 - [Micro SD-kaart 16GB](https://www.sossolutions.nl/16gb-sandisk-ultra-micro-sdhc-80mb-s)
 - [Female/Female jumperwires](https://www.sossolutions.nl/premium-female-female-jumper-wires-40-x-6)
+
+
+## TODO / Op te letten
+
+- Parse string (?) naar int in javascript om te tonen op grafiek.
+- Omzetten van int naar float/double in javascript + MySQL, ...
