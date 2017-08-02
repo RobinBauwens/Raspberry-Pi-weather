@@ -10,6 +10,12 @@
 
 [HTML in PHP](https://www.ntchosting.com/encyclopedia/scripting-and-programming/php/php-in/)
 
+[Uptime in PHP](https://stackoverflow.com/questions/38907572/how-to-display-system-uptime-in-php)
+
+[Newline in PHP](https://stackoverflow.com/questions/4238433/php-how-to-create-a-newline-character)
+
+[Seconden afgerond op 2 cijfers in PHP](https://stackoverflow.com/questions/4483540/php-show-a-number-to-2-decimal-places)
+
 ## CanvasJS
 
 [CanvasJS](https://canvasjs.com/)
