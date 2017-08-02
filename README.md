@@ -32,17 +32,18 @@
 /- Omzetten van int naar float/double in javascript + MySQL, ...
 - Pas op met parseren; ook opletten voor 10,20,30,etc. (De getekende lijn kan soms "onder" de lijnen van de y-as liggen) 
 - Correctie: lijnen liggen niet per se onder andere lijnen, probleem was: parseren naar int...
--->
+
 
 **Maak ook een crontab via `crontab -e`:**
 
 `TZ="Europe/Brussels"`
 
 `0,30 * * * * /usr/bin/python /home/pi/mysqltest.py`
-
+-->
 
 - Vul/pas `mysql.md` verder aan + naamgeving `mysqltest.py` aanpassen.
-- Toevoegen foto's
+- Toevoegen foto's.
+- Scheiden JS en PHP + lay-out CSS
 
 ### Werking
 
