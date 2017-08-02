@@ -31,3 +31,11 @@
 /- Parse string (?) naar int in javascript om te tonen op grafiek.
 /- Omzetten van int naar float/double in javascript + MySQL, ...
 -->
+
+** Maak ook een crontab via `crontab -e`:**
+
+`TZ="Europe/Brussels"`
+
+`0,30 * * * * /usr/bin/python /home/pi/mysqltest.py`
+
+
