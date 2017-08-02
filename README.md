@@ -25,7 +25,9 @@
 - [Female/Female jumperwires](https://www.sossolutions.nl/premium-female-female-jumper-wires-40-x-6)
 
 
-## TODO / Op te letten
 
-- Parse string (?) naar int in javascript om te tonen op grafiek.
-- Omzetten van int naar float/double in javascript + MySQL, ...
+<!--## TODO / Op te letten
+
+/- Parse string (?) naar int in javascript om te tonen op grafiek.
+/- Omzetten van int naar float/double in javascript + MySQL, ...
+-->
