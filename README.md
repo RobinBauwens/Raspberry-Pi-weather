@@ -31,6 +31,7 @@
 /- Parse string (?) naar int in javascript om te tonen op grafiek.
 /- Omzetten van int naar float/double in javascript + MySQL, ...
 - Pas op met parseren; ook opletten voor 10,20,30,etc. (De getekende lijn kan soms "onder" de lijnen van de y-as liggen) 
+- Correctie: lijnen liggen niet per se onder andere lijnen, probleem was: parseren naar int...
 -->
 
 **Maak ook een crontab via `crontab -e`:**
