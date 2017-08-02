@@ -21,6 +21,21 @@ function get_data()
 
 $file_name= 'weatherdata.json';
 file_put_contents($file_name, get_data());
+
+
+$str   = @file_get_contents('/proc/uptime');
+$num   = floatval($str);
+$secs  = fmod($num, 60); $num = (int)($num / 60);
+$mins  = $num % 60;      $num = (int)($num / 60);
+$hours = $num % 24;      $num = (int)($num / 24);
+$days  = $num;
+
+echo '<h1>Totale uptime</h1>';
+echo 'Dagen: ',$days,PHP_EOL,'<br>';
+echo 'Uren: ',$hours,PHP_EOL,'<br>';
+echo 'Minuten: ',$mins,PHP_EOL,'<br>';
+echo 'Seconden: ',number_format((float)$secs, 2, '.', '');
+
 ?>
 
 <html>
