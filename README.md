@@ -50,7 +50,7 @@ Dit project werkt gemaakt om de temperatuur (en luchtvochtigheid) te meten a.d.h
 
 Via een `crontab`-entry zal het script automatisch om de 30 minuten aangeroepen worden.
 
-In `/var/www/html/` (Apache) zal je de `index.php` vinden (bij mij `http://192.168.0.110/index.php`; indien er in je `html`-directory geen andere index-bestanden zitten kan je ook `http://192.168.0.110` gebruiken). Indien je dit bestand opent in je browser dan zal er verbinding gemaakt worden met de databank en een `weatherdata.json`-bestand aangemaakt worden in `/var/www/html/`. Het PHP-bestand bevat ook JavaScript (incl. jQuery en CanvasJS) en HTML die 2 canvassen maakt daarin eenerzijds de gemeten temperatuur + timestamp en anderzijds de gemeten luchtvochtigheid + timestamp.
+In `/var/www/html/` (Apache) zal je de `index.php` vinden (bij mij `http://192.168.0.110/index.php`; indien er in je `html`-directory geen andere index-bestanden zitten kan je ook `http://192.168.0.110` gebruiken). Indien je dit bestand opent in je browser dan zal er verbinding gemaakt worden met de databank en een `weatherdata.json`-bestand aangemaakt worden in `/var/www/html/`. Het PHP-bestand bevat ook JavaScript (incl. jQuery en CanvasJS) en HTML die 2 canvassen maakt met daarin eenerzijds de gemeten temperatuur + timestamp en anderzijds de gemeten luchtvochtigheid + timestamp.
 
 
 ### Werking TL;DR
