@@ -16,4 +16,6 @@
 
 [Lay-out grafieken; labels](https://canvasjs.com/editor/?id=https://canvasjs.com/example/gallery/dynamic/live_column/)
 
-[labels grafieken](https://canvasjs.com/docs/charts/basics-of-creating-html5-chart/labels-index-labels/)
+[Labels grafieken](https://canvasjs.com/docs/charts/basics-of-creating-html5-chart/labels-index-labels/)
+
+[Zoom CanvasJS](https://canvasjs.com/docs/charts/basics-of-creating-html5-chart/zooming-panning/)
