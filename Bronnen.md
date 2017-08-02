@@ -13,3 +13,7 @@
 [Omvorming Date-formaat JS](https://stackoverflow.com/questions/3075577/convert-mysql-datetime-stamp-into-javascripts-date-format)
 
 [HTML in PHP](https://www.ntchosting.com/encyclopedia/scripting-and-programming/php/php-in/)
+
+[Lay-out grafieken; labels](https://canvasjs.com/editor/?id=https://canvasjs.com/example/gallery/dynamic/live_column/)
+
+[labels grafieken](https://canvasjs.com/docs/charts/basics-of-creating-html5-chart/labels-index-labels/)
