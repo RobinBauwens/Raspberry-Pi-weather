@@ -43,4 +43,15 @@
 
 Vul/pas `mysql.md` verder aan + naamgeving `mysqltest.py` aanpassen.
 
+### Werking
 
+Dit project werkt gemaakt om de temperatuur (en luchtvochtigheid) te meten a.d.h.v. sensoren (DS18B20 & AM2302). De gemeten waarden worden opgevraagd via `mysqltest.py`. Dit script zal ook een MySQL-database `WeatherStation` met tabel `WeatherData` aanmaken indien deze nog niet bestaat (zie bestand `createTable.sql`). Vervolgens zal het script de tabel aanvullen (kolommen `ID`, `Temperature` (float met 1 cijfer na de komma), `Humidity` (varchar voor percentage), `Timestamp`).
+
+Via een `crontab`-entry zal het script automatisch om de 30 minuten aangeroepen worden.
+
+
+
+
+### Werking TL;DR
+
+Sensors -> Python -> MySQL -> PHP -> Data (JSON) -> HTML & JS ->  kewl graphs
