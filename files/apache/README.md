@@ -1,6 +1,6 @@
 ## Extra informatie
 
-path= `/var/www/html/`
+path= `/var/www/html/` ; **opgelet: root privileges nodig!**
 
 `index.php`: bevat HTML (toon grafiek) en PHP (update .json-bestand eerst)
 
