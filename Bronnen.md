@@ -16,6 +16,10 @@
 
 [Seconden afgerond op 2 cijfers in PHP](https://stackoverflow.com/questions/4483540/php-show-a-number-to-2-decimal-places)
 
+[HTML oproepen vanuit PHP](https://stackoverflow.com/questions/43605819/how-to-call-a-html-file-from-php/43605960)
+
+[VIM stuff](https://unix.stackexchange.com/questions/13904/how-to-select-delete-until-end-of-file-in-vim-gvim)
+
 ## CanvasJS
 
 [CanvasJS](https://canvasjs.com/)
