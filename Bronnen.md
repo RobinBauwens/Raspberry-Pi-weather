@@ -22,6 +22,8 @@
 
 [Samba (file sharing)](http://raspberrypihq.com/how-to-share-a-folder-with-a-windows-computer-from-a-raspberry-pi/)
 
+[Directory verplaatsen naar nieuwe repository](https://help.github.com/articles/splitting-a-subfolder-out-into-a-new-repository/)
+
 ## CanvasJS
 
 [CanvasJS](https://canvasjs.com/)
