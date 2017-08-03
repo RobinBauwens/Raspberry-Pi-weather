@@ -7,7 +7,6 @@ window.onload = function () {
    //console.log(value.Timestamp);
    //console.log(value.Temperature);
 
-
    // Split timestamp into [ Y, M, D, h, m, s ]
    var t = value.Timestamp.split(/[- :]/);
    // Apply each element to the Date function
@@ -37,13 +36,16 @@ window.onload = function () {
     suffix: " °C"
    },
    data: [{
-    type: "line",
+    type: "area",
     dataPoints: dataPoints,
     //indexLabel: "{y} °C",
     toolTipContent: "Datum= {x} </br> Temperatuur= {y} °C"
                 }]
   });
   chart.render();
+  //eerste record invullen
+
+
  });
 
  dataPoints2 = []; //array voor luchtvochtigheid (opgeslagen als varchar in DB)
@@ -77,7 +79,7 @@ window.onload = function () {
     suffix: " %"
    },
    data: [{
-    type: "line",
+    type: "area",
     dataPoints: dataPoints2,
     //indexLabel: "{y} %",
     toolTipContent: "Datum= {x} </br> Vochtigheid= {y} %"
