@@ -1,15 +1,20 @@
 window.onload = function () {
- var dataPoints = [];
- $.getJSON("weatherdata.json", function (data) {
+ var dataPoints = []; //array voor temperatuur (opgeslagen als int in DB)
+ var dataPoints2 = []; //array voor luchtvochtigheid (opgeslagen als int in DB)
+ $.getJSON("files/weatherdata.json", function (data) {
 
-    //eerste record invullen
+  //eerste record invullen
   $("#firstRecord").append(data[0].Timestamp);
 
   //console.log(data[0]);
 
   //minimumtemperatuur en maximumtemperatuur invullen
-  var min = Math.min.apply(Math,data.map(function(o){return o.Temperature;}));
-  var max = Math.max.apply(Math,data.map(function(o){return o.Temperature;}));
+  var min = Math.min.apply(Math, data.map(function (o) {
+   return o.Temperature;
+  }));
+  var max = Math.max.apply(Math, data.map(function (o) {
+   return o.Temperature;
+  }));
   $("#minimumTemp").append(min).append(" °C").append("<br>").append("Geregistreerd op volgende data (eerste 3 datapunten):").append("<hr>");
   $("#maximumTemp").append(max).append(" °C").append("<br>").append("Geregistreerd op volgende data (eerste 3 datapunten):").append("<hr>");
 
@@ -18,18 +23,18 @@ window.onload = function () {
 
   $.each(data, function (key, value) {
 
-    //min en max temp aanvullen met datum (vult enkel eerste datum in)
+   //min en max temp aanvullen met datum (vult enkel eerste datum in)
 
-    if(min==value.Temperature && minCount<=3){
-        $("#minimumTemp").append('<p>',value.Timestamp,"</p>");
-        minCount++;
-    }
+   if (min == value.Temperature && minCount <= 3) {
+    $("#minimumTemp").append('<p>', value.Timestamp, "</p>");
+    minCount++;
+   }
 
-    if(max==value.Temperature && maxCount<=3){
-        $("#maximumTemp").append('<p>',value.Timestamp,"</p>");
-        maxCount++;
-    }
-   
+   if (max == value.Temperature && maxCount <= 3) {
+    $("#maximumTemp").append('<p>', value.Timestamp, "</p>");
+    maxCount++;
+   }
+
 
    //console.log(value);
    //console.log(value.ID);
@@ -47,7 +52,10 @@ window.onload = function () {
     y: parseFloat(value.Temperature)
    });
 
-
+   dataPoints2.push({
+    x: d,
+    y: parseInt(value.Humidity)
+   });
 
   });
   var chart = new CanvasJS.Chart("chartContainer", {
@@ -77,21 +85,8 @@ window.onload = function () {
 
  });
 
- dataPoints2 = []; //array voor luchtvochtigheid (opgeslagen als varchar in DB)
- $.getJSON("weatherdata.json", function (data) {
-  $.each(data, function (key, value) {
-   // Split timestamp into [ Y, M, D, h, m, s ]
-   var t = value.Timestamp.split(/[- :]/);
 
-   // Apply each element to the Date function
-   var d = new Date(t[0], t[1] - 1, t[2], t[3], t[4], t[5]);
-   //console.log(d);
-
-   dataPoints2.push({
-    x: d,
-    y: parseInt(value.Humidity)
-   });
-  });
+ $.getJSON("files/weatherdata.json", function (data) {
   var chart2 = new CanvasJS.Chart("chartContainer2", {
    zoomEnabled: true,
    title: {
@@ -118,7 +113,3 @@ window.onload = function () {
   chart2.render();
  });
 }
-
-//TODO: 2de lus verwerken in 1ste
-//TODO: DB-tabel "CreateWeatherData.sql" en laatste regel verwijderen + humidity naar int (?)
-//TODO: formattering text-left en text-right bij min en max temp

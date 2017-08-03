@@ -1,5 +1,5 @@
 body {
- background-image: url("../dark-triangles.png");
+ background-image: url("../files/dark-triangles.png");
  /* https://www.toptal.com/designers/subtlepatterns/dark-triangles/ */
  font-family: GothamMedium;
 }
@@ -9,13 +9,15 @@ div {
 }
 
 hr {
-	width: 100px;
+ width: 100px;
 }
 
 #copyright {
-	margin-right: 20px;
-	font-size: 14px;
+ margin-right: 20px;
+ margin-top: -5px;
+ font-size: 14px;
 }
+
 
 /*
 h2 {

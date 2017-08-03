@@ -19,7 +19,7 @@ function get_data()
         return json_encode($data);
 }
 
-$file_name= 'weatherdata.json';
+$file_name= 'files/weatherdata.json';
 
 $result=file_put_contents($file_name, get_data());
 
