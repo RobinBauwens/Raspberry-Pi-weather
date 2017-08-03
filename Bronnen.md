@@ -24,6 +24,8 @@
 
 [Directory verplaatsen naar nieuwe repository](https://help.github.com/articles/splitting-a-subfolder-out-into-a-new-repository/)
 
+[Samba write permission](https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=109428)
+
 ## CanvasJS
 
 [CanvasJS](https://canvasjs.com/)
