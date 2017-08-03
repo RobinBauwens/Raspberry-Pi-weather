@@ -44,6 +44,13 @@ window.onload = function () {
   });
   chart.render();
   //eerste record invullen
+  $("#firstRecord").append(data[0].Timestamp);
+
+  //console.log(data[0]);
+
+  //minimumtemperatuur en maximumtemperatuur invullen
+  $("#minimumTemp").append(Math.min.apply(Math,data.map(function(o){return o.Temperature;}))).append(" °C");
+  $("#maximumTemp").append(Math.max.apply(Math,data.map(function(o){return o.Temperature;}))).append(" °C");
 
 
  });
@@ -89,3 +96,5 @@ window.onload = function () {
   chart2.render();
  });
 }
+
+//TODO: 2de lus verwerken in 1ste
