@@ -41,7 +41,7 @@
 `0,30 * * * * /usr/bin/python /home/pi/mysqltest.py`
 -->
 
-- Vul/pas `mysql.md` verder aan + naamgeving `mysqltest.py` aanpassen.
+- Naamgeving `mysqltest.py` aanpassen.
 - Toevoegen foto's.
 <!-- - Scheiden JS en PHP + lay-out CSS -->
 
@@ -59,3 +59,8 @@ In `/var/www/html/` (Apache) zal je de `index.php` vinden (bij mij `http://192.1
 Sensors -> Python -> MySQL -> PHP -> Data (JSON) -> HTML & JS ->  kewl graphs
 
 DB (MySQL) werd gebruikt om LAMP-stack te simuleren.
+
+
+### Demo
+
+![Demo (dummydata)](img/demo.PNG)
