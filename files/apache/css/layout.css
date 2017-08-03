@@ -8,9 +8,20 @@ div {
  color: white;
 }
 
+hr {
+	width: 100px;
+}
+
+#copyright {
+	margin-right: 20px;
+	font-size: 14px;
+}
+
+/*
 h2 {
  margin-bottom: 30px;
 }
+*/
 
 #containers {
  width: 90%;

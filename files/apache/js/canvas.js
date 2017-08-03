@@ -1,7 +1,36 @@
 window.onload = function () {
  var dataPoints = [];
  $.getJSON("weatherdata.json", function (data) {
+
+    //eerste record invullen
+  $("#firstRecord").append(data[0].Timestamp);
+
+  //console.log(data[0]);
+
+  //minimumtemperatuur en maximumtemperatuur invullen
+  var min = Math.min.apply(Math,data.map(function(o){return o.Temperature;}));
+  var max = Math.max.apply(Math,data.map(function(o){return o.Temperature;}));
+  $("#minimumTemp").append(min).append(" °C").append("<br>").append("Geregistreerd op volgende data (eerste 3 datapunten):").append("<hr>");
+  $("#maximumTemp").append(max).append(" °C").append("<br>").append("Geregistreerd op volgende data (eerste 3 datapunten):").append("<hr>");
+
+  var minCount = 1;
+  var maxCount = 1;
+
   $.each(data, function (key, value) {
+
+    //min en max temp aanvullen met datum (vult enkel eerste datum in)
+
+    if(min==value.Temperature && minCount<=3){
+        $("#minimumTemp").append('<p>',value.Timestamp,"</p>");
+        minCount++;
+    }
+
+    if(max==value.Temperature && maxCount<=3){
+        $("#maximumTemp").append('<p>',value.Timestamp,"</p>");
+        maxCount++;
+    }
+   
+
    //console.log(value);
    //console.log(value.ID);
    //console.log(value.Timestamp);
@@ -17,6 +46,8 @@ window.onload = function () {
     x: d,
     y: parseFloat(value.Temperature)
    });
+
+
 
   });
   var chart = new CanvasJS.Chart("chartContainer", {
@@ -43,15 +74,6 @@ window.onload = function () {
                 }]
   });
   chart.render();
-  //eerste record invullen
-  $("#firstRecord").append(data[0].Timestamp);
-
-  //console.log(data[0]);
-
-  //minimumtemperatuur en maximumtemperatuur invullen
-  $("#minimumTemp").append(Math.min.apply(Math,data.map(function(o){return o.Temperature;}))).append(" °C");
-  $("#maximumTemp").append(Math.max.apply(Math,data.map(function(o){return o.Temperature;}))).append(" °C");
-
 
  });
 
@@ -98,3 +120,5 @@ window.onload = function () {
 }
 
 //TODO: 2de lus verwerken in 1ste
+//TODO: DB-tabel "CreateWeatherData.sql" en laatste regel verwijderen + humidity naar int (?)
+//TODO: formattering text-left en text-right bij min en max temp
