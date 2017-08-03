@@ -1,0 +1,22 @@
+body {
+ background-image: url("../dark-triangles.png");
+ /* https://www.toptal.com/designers/subtlepatterns/dark-triangles/ */
+ font-family: GothamMedium;
+}
+
+div {
+ color: white;
+}
+
+h2 {
+ margin-bottom: 30px;
+}
+
+#containers {
+ width: 90%;
+}
+
+@font-face {
+ font-family: GothamMedium;
+ src: url("../files/Gotham Medium Regular.ttf");
+}

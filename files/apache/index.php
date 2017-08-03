@@ -13,7 +13,7 @@ function get_data()
                         'Temperature' => $row['Temperature'],
                         'Humidity' => $row['Humidity'],
                         'Timestamp' => $row['Timestamp']
-                        );
+                     );
         }
 
         return json_encode($data);
@@ -30,17 +30,17 @@ $mins  = $num % 60;      $num = (int)($num / 60);
 $hours = $num % 24;      $num = (int)($num / 24);
 $days  = $num;
 
-echo '<h1>Totale uptime</h1>';
-echo 'Dagen: ',$days,PHP_EOL,'<br>';
-echo 'Uren: ',$hours,PHP_EOL,'<br>';
-echo 'Minuten: ',$mins,PHP_EOL,'<br>';
-echo 'Seconden: ',number_format((float)$secs, 2, '.', ''),'<br>';
-
-
-$uurOmgevormd = $hours + $mins/60 + $secs/3600;
-echo '<br>Gemiddeld energieverbuik: ',$uurOmgevormd; //nog maal gemiddeld verbruik per uur
-
-
 include 'index.html';
-?>
 
+echo '<div class="text-center">';
+//echo '<h1>UPTIME, ENERGIEVERBRUIK EN VOLGENDE UPDATE</h1>';
+//echo '<br><h3>UPTIME: ',$days,' dagen, ',$hours,' uren, ',$mins,' minuten, ',number_format((float)$secs, 2, '.', ''),' seconden.</h3>'; afgerond op 2 cijfers na de komma
+echo '<br><h3>UPTIME: ',$days,' dagen, ',$hours,' uren, ',$mins,' minuten, ',(int)$secs,' seconden.</h3>';
+
+//$uurOmgevormd = $hours + $mins/60 + $secs/3600;
+//echo '<br><h3>Gemiddeld energieverbuik: ',$uurOmgevormd,'</h3>'; //nog maal gemiddeld verbruik per uur
+
+echo '<h3>Volgende update in ',(date('i')<=30 ? abs(30-date('i')):abs(60-date('i'))),' minuten en ',60-date('s'), ' seconden.</h3>'; //date('i') geeft minuten terug, date('s') geeft seconden terug (lokale tijd, niet tijd na uptime!)
+echo '</div>';
+
+?>
