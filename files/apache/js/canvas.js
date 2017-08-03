@@ -6,8 +6,6 @@ window.onload = function () {
   //eerste record invullen
   $("#firstRecord").append(data[0].Timestamp);
 
-  //console.log(data[0]);
-
   //minimumtemperatuur en maximumtemperatuur invullen
   var min = Math.min.apply(Math, data.map(function (o) {
    return o.Temperature;
@@ -24,7 +22,6 @@ window.onload = function () {
   $.each(data, function (key, value) {
 
    //min en max temp aanvullen met datum (vult enkel eerste datum in)
-
    if (min == value.Temperature && minCount <= 3) {
     $("#minimumTemp").append('<p>', value.Timestamp, "</p>");
     minCount++;
@@ -35,17 +32,10 @@ window.onload = function () {
     maxCount++;
    }
 
-
-   //console.log(value);
-   //console.log(value.ID);
-   //console.log(value.Timestamp);
-   //console.log(value.Temperature);
-
    // Split timestamp into [ Y, M, D, h, m, s ]
    var t = value.Timestamp.split(/[- :]/);
    // Apply each element to the Date function
    var d = new Date(t[0], t[1] - 1, t[2], t[3], t[4], t[5]);
-   //console.log(d);
 
    dataPoints.push({
     x: d,
@@ -67,7 +57,6 @@ window.onload = function () {
    axisX: {
     title: "Timestamp",
     valueFormatString: "HH:mm"
-    //valueFormatString: "HH:mm:ss"
    },
 
    axisY: {
@@ -77,7 +66,6 @@ window.onload = function () {
    data: [{
     type: "area",
     dataPoints: dataPoints,
-    //indexLabel: "{y} °C",
     toolTipContent: "Datum= {x} </br> Temperatuur= {y} °C"
                 }]
   });
@@ -95,7 +83,6 @@ window.onload = function () {
    axisX: {
     title: "Timestamp",
     valueFormatString: "HH:mm"
-    //valueFormatString: "HH:mm:ss"
    },
 
    axisY: {
@@ -105,7 +92,6 @@ window.onload = function () {
    data: [{
     type: "area",
     dataPoints: dataPoints2,
-    //indexLabel: "{y} %",
     toolTipContent: "Datum= {x} </br> Vochtigheid= {y} %"
                 }]
   });
