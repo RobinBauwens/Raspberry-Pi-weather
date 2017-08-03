@@ -20,6 +20,8 @@
 
 [VIM stuff](https://unix.stackexchange.com/questions/13904/how-to-select-delete-until-end-of-file-in-vim-gvim)
 
+[Samba (file sharing)](http://raspberrypihq.com/how-to-share-a-folder-with-a-windows-computer-from-a-raspberry-pi/)
+
 ## CanvasJS
 
 [CanvasJS](https://canvasjs.com/)
