@@ -37,5 +37,19 @@ echo '<h4>UPTIME: ',$days,($days==1?' dag, ':' dagen, '),$hours,($hours==1?' uur
 
 echo '<h3>Volgende update in ',(date('i')<=30 ? abs(30-date('i')):abs(60-date('i'))),(date('i')==1?' minuut ':' minuten '),'en ',60-date('s'), (60-date('s')==1?' seconde':' seconden'),'.</h3>'; 
 //date('i') geeft minuten terug, date('s') geeft seconden terug (lokale tijd, niet tijd na uptime!)
+
+//$cmd='ping -c 10 127.0.0.1';
+
+system('./ram.sh 2>&1'); //geen echo erbij, herhaalt onnodig uitvoer dan
+echo '<br>';
+system('./disk.sh 2>&1');
+echo '<br>';
+system('./cpu.sh');
+
+//echo '<pre>';
+//passthru($cmd);
+//echo '</pre>';
+
+
 echo '</div>';
 ?>

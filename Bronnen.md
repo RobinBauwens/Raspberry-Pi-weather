@@ -13,6 +13,8 @@
 - [Samba write permission](https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=109428)
 
 - [Maximum vinden zonder for-lus](https://stackoverflow.com/questions/4020796/finding-the-max-value-of-an-attribute-in-an-array-of-objects)
+- [Tonen CPU, RAM en Diskgebruik](https://unix.stackexchange.com/questions/119126/command-to-display-memory-usage-disk-usage-and-cpu-load)
+- [Uitvoeren BASH-script in PHP](https://serverfault.com/questions/396852/is-there-a-way-to-make-output-from-bash-script-visible-in-browser)
 
 ## PHP
 
