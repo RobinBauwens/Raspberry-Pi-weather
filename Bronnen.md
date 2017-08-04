@@ -16,6 +16,12 @@
 - [Tonen CPU, RAM en Diskgebruik](https://unix.stackexchange.com/questions/119126/command-to-display-memory-usage-disk-usage-and-cpu-load)
 - [Uitvoeren BASH-script in PHP](https://serverfault.com/questions/396852/is-there-a-way-to-make-output-from-bash-script-visible-in-browser)
 
+- [Python formattering naar .1f](https://stackoverflow.com/questions/455612/limiting-floats-to-two-decimal-points)
+
+- [Import module Adafruit DHT22/AM2302](https://stackoverflow.com/questions/26246239/dht22-sensor-import-adafruit-dht-error)
+
+- [Import (extra)](https://raspberrytips.nl/dht22-temperatuursensor-raspberry-pi/)
+
 ## PHP
 
 - [MySQL via PHP naar JSON](https://www.youtube.com/watch?v=CZ8PdfVZTCQ)
