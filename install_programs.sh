@@ -12,4 +12,8 @@ sudo apt-get install apache2 -y
 sudo apt-get install php5 libapache2-mod-php5 -y
 sudo apt-get install php5-mysql
 
+sudo apt-get install python-dev
+git clone https://github.com/adafruit/Adafruit_Python_DHT
+cd Adafruit\_Python\_DHT && sudo python setup.py install
+
 mysql_secure_installation
