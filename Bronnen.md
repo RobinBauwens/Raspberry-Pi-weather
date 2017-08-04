@@ -21,6 +21,8 @@
 - [Import module Adafruit DHT22/AM2302](https://stackoverflow.com/questions/26246239/dht22-sensor-import-adafruit-dht-error)
 
 - [Import (extra)](https://raspberrytips.nl/dht22-temperatuursensor-raspberry-pi/)
+- [Temperatuur meten op Raspberry Pi](https://www.cyberciti.biz/faq/linux-find-out-raspberry-pi-gpu-and-arm-cpu-temperature-command/)
+- [Probleem temp voor gebruiker 'www-data' + reboot nodig](http://www.it-weetjes.nl/vchi-initialization-failed/)
 
 ## PHP
 

@@ -16,4 +16,8 @@ sudo apt-get install python-dev
 git clone https://github.com/adafruit/Adafruit_Python_DHT
 cd Adafruit\_Python\_DHT && sudo python setup.py install
 
+sudo usermod -a -G video www-data
+#anders krijg je fouten bij "vcgencmd measure_temp" + ook rebooten
+#zie http://www.it-weetjes.nl/vchi-initialization-failed/
+
 mysql_secure_installation
