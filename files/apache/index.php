@@ -43,9 +43,16 @@ echo '<h3>Volgende update in ',(date('i')<=30 ? abs(30-date('i')):abs(60-date('i
 
 system('./files/ram.sh 2>&1'); //geen echo erbij, herhaalt onnodig uitvoer dan
 echo '<br>';
-system('./files/disk.sh 2>&1');
-echo '<br>';
+//system('./files/disk.sh 2>&1');
+//echo '<br>';
 system('./files/cpu.sh');
+echo '<br>';
+system("/opt/vc/bin/vcgencmd measure_temp"); //eerst gebruiker "www-data" (zie 'whoami') toevoegen met "sudo usermod -a -G video www-data"
+
+//system("whoami");
+//echo '<br>';
+
+
 
 //echo '<pre>';
 //passthru($cmd);

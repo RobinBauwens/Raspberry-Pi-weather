@@ -60,7 +60,7 @@ window.onload = function () {
    },
 
    axisY: {
-    title: "Temperatuur (in Celsius)",
+    title: "Temperatuur (in °C)",
     suffix: " °C"
    },
    data: [{
