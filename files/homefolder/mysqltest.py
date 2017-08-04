@@ -1,5 +1,5 @@
-#import sys
-#import Adafruit_DHT
+import sys
+import Adafruit_DHT
 
 import subprocess
 import re
@@ -12,8 +12,8 @@ databaseUsername="root"
 databasePassword="mariadb-password"
 databaseName="WeatherStation" #do not change unless you named the Wordpress database with some other name
 
-#sensor=Adafruit_DHT.DHT22 #if not using DHT22, replace with Adafruit_DHT.DHT11 or Adafruit_DHT.AM2302
-#pinNum=4 #if not using pin number 4, change here
+sensor=Adafruit_DHT.AM2302 #if not using DHT22, replace with Adafruit_DHT.DHT11 or Adafruit_DHT.AM2302
+pinNum=4 #if not using pin number 4, change here
 
 def saveToDatabase(temperature,humidity):
 
@@ -37,9 +37,13 @@ def saveToDatabase(temperature,humidity):
 
 def readInfo():
 
-        #humidity, temperature = Adafruit_DHT.read_retry(sensor, pinNum)#read_retry - retry getting temperatures for 15 times
-        humidity=10
-        temperature=24
+        humidity, temperature = Adafruit_DHT.read_retry(sensor, pinNum)#read_retry - retry getting temperatures for 15 times
+        humidity= int(humidity)
+      	#print temperature
+        temperature = float(format(temperature, '.1f'))
+        #print temperature
+        #humidity=10
+        #temperature=24
         print "Temperature: %.1f C" % temperature
         print "Humidity:    %s %%" % humidity
 
@@ -77,4 +81,3 @@ except IOError:
 
 
 status=readInfo() #get the readings
-
