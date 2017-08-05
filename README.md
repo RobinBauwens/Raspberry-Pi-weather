@@ -15,6 +15,7 @@
 - [Breadboard](https://www.sossolutions.nl/half-size-breadboard)
 - [Micro SD-kaart 16GB](https://www.sossolutions.nl/16gb-sandisk-ultra-micro-sdhc-80mb-s)
 - [Female/Female jumperwires](https://www.sossolutions.nl/premium-female-female-jumper-wires-40-x-6)
+- Voeding
 
 
 ## Benodigdheden AM2302: temperatuur & luchtvochtigheid
@@ -23,7 +24,7 @@
 - [AM2302](https://www.sossolutions.nl/393-am2302-wired-dht22-temperature-humidity-sensor)
 - [Micro SD-kaart 16GB](https://www.sossolutions.nl/16gb-sandisk-ultra-micro-sdhc-80mb-s)
 - [Female/Female jumperwires](https://www.sossolutions.nl/premium-female-female-jumper-wires-40-x-6)
-
+- Voeding
 
 
 <!--## TODO / Op te letten
@@ -42,12 +43,12 @@
 -->
 
 - Naamgeving `mysqltest.py` aanpassen.
-- Toevoegen foto's.
-<!-- - Scheiden JS en PHP + lay-out CSS -->
+<!--- Toevoegen foto's.
+ - Scheiden JS en PHP + lay-out CSS -->
 
 ### Werking
 
-Dit project werkt gemaakt om de temperatuur (en luchtvochtigheid) te meten a.d.h.v. sensoren (DS18B20 & AM2302). De gemeten waarden worden opgevraagd via `mysqltest.py`. Dit script zal ook een MySQL-database `WeatherStation` met tabel `WeatherData` aanmaken indien deze nog niet bestaat (zie bestand `createTable.sql`). Vervolgens zal het script de tabel aanvullen (kolommen `ID`, `Temperature` (float met 1 cijfer na de komma), `Humidity` (varchar voor percentage), `Timestamp`).
+Dit project werkt gemaakt om de temperatuur (en luchtvochtigheid) te meten a.d.h.v. sensoren (DS18B20 & AM2302). De gemeten waarden worden opgevraagd via `mysqltest.py`. Dit script zal ook een MySQL-database `WeatherStation` met tabel `WeatherData` aanmaken indien deze nog niet bestaat (zie bestand `createTable.sql`). Vervolgens zal het script de tabel aanvullen (kolommen `ID`, `Temperature` (float met 1 cijfer na de komma), `Humidity` (int voor percentage), `Timestamp`).
 
 Via een `crontab`-entry zal het script automatisch om de 30 minuten aangeroepen worden.
 
