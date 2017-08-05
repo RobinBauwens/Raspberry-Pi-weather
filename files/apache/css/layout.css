@@ -27,3 +27,9 @@ hr {
  font-family: GothamMedium;
  src: url("../files/Gotham Medium Regular.ttf");
 }
+
+@media (max-device-width: 480px) {
+    h4 {
+    	font-size: 12px;
+    }
+}

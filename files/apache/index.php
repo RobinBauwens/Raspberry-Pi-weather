@@ -35,20 +35,30 @@ include 'index.html';
 echo '<div class="text-center" id="extra">';
 echo '<h4>UPTIME: ',$days,($days==1?' dag, ':' dagen, '),$hours,($hours==1?' uur ':' uren, '),$mins,($mins==1?' minuut':' minuten'),' en ',(int)$secs,((int)$secs==1?' seconde':' seconden'),'.</h4>';
 
-echo '<h3>Volgende update in ',(date('i')<=30 ? abs(30-date('i')):abs(60-date('i'))),(date('i')==1?' minuut ':' minuten '),'en ',60-date('s'), (60-date('s')==1?' seconde':' seconden'),'.</h3>'; 
+echo '<h4>Volgende update in ',(date('i')<=30 ? abs(30-date('i')):abs(60-date('i'))),(date('i')==1?' minuut ':' minuten '),'en ',60-date('s'), (60-date('s')==1?' seconde':' seconden'),'.</h4>'; 
 //date('i') geeft minuten terug, date('s') geeft seconden terug (lokale tijd, niet tijd na uptime!)
 
 //$cmd='ping -c 10 127.0.0.1';
-
-
-system('./files/ram.sh 2>&1'); //geen echo erbij, herhaalt onnodig uitvoer dan
 echo '<br>';
+
+echo '<h4>';
+system('./files/ram.sh 2>&1'); //geen echo erbij, herhaalt onnodig uitvoer dan
+echo '</h4>';
 //system('./files/disk.sh 2>&1');
 //echo '<br>';
-system('./files/cpu.sh');
-echo '<br>';
-system("/opt/vc/bin/vcgencmd measure_temp"); //eerst gebruiker "www-data" (zie 'whoami') toevoegen met "sudo usermod -a -G video www-data"
 
+echo '<h4>';
+system('./files/cpu.sh');
+echo '</h4>';
+
+$temp=exec("/opt/vc/bin/vcgencmd measure_temp");
+echo '<h4>';
+$temp=str_replace("temp=",'Temperatuur Raspberry Pi: ',$temp); //eerst gebruiker "www-data" (zie 'whoami') toevoegen met "sudo usermod -a -G video www-data"
+echo str_replace("'", " °", $temp);
+// exec() > system()
+// https://stackoverflow.com/questions/2568093/system-function-in-php-prints-variable-2-times
+
+echo '</h4>';
 //system("whoami");
 //echo '<br>';
 
