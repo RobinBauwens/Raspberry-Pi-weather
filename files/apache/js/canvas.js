@@ -6,6 +6,9 @@ window.onload = function () {
   //eerste record invullen
   $("#firstRecord").append(data[0].Timestamp);
 
+  //tonen laatste gegevens
+  $("#lastData").append(data[data.length-1].Temperature).append("° C; ").append(data[data.length-1].Humidity).append(" %");
+
   //minimumtemperatuur en maximumtemperatuur invullen
   var min = Math.min.apply(Math, data.map(function (o) {
    return o.Temperature;
@@ -35,7 +38,7 @@ window.onload = function () {
    // Split timestamp into [ Y, M, D, h, m, s ]
    var t = value.Timestamp.split(/[- :]/);
    // Apply each element to the Date function
-   var d = new Date(t[0], t[1] - 1, t[2], t[3], t[4], t[5]);
+   var d = new Date(t[0], t[1] - 1, t[2], t[3], t[4], t[5]); //month: januari = 0, februari = 1,...
 
    dataPoints.push({
     x: d,
@@ -56,7 +59,12 @@ window.onload = function () {
 
    axisX: {
     title: "Timestamp",
-    valueFormatString: "HH:mm"
+   // valueFormatString: "hh:mm TT",
+   // valueFormatString: "HH:mm",
+    interval:1,
+    intervalType: "day"
+   // intervalType:"month",
+   //valueFormatString: "DDD HH:mm:ss"
    },
 
    axisY: {
