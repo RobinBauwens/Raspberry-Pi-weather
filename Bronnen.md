@@ -44,6 +44,10 @@
 
 - [PHP time (minutes and seconds)](https://stackoverflow.com/questions/4538607/how-to-get-current-minutes-php?rq=1)
 
+- [Replace String](http://php.net/manual/pl/function.str-replace.php)
+
+- [exec() ipv system()](https://stackoverflow.com/questions/2568093/system-function-in-php-prints-variable-2-times)
+
 ## CanvasJS
 
 - [CanvasJS](https://canvasjs.com/)
