@@ -63,3 +63,7 @@
 - [Formatting date time](https://canvasjs.com/docs/charts/basics-of-creating-html5-chart/formatting-date-time/)
 
 - [Tooltipcontent](https://canvasjs.com/docs/charts/chart-options/data/tooltipcontent/)
+
+- [valueFormatString](https://canvasjs.com/docs/charts/chart-options/axisx/valueformatstring/)
+
+- [xValueFormatString](https://canvasjs.com/docs/charts/chart-options/data/x-value-format-string/)
