@@ -24,21 +24,26 @@ window.onload = function () {
 
   $.each(data, function (key, value) {
 
-   //min en max temp aanvullen met datum (vult enkel eerste datum in)
-   if (min == value.Temperature && minCount <= 3) {
-    $("#minimumTemp").append('<p>', value.Timestamp, "</p>");
-    minCount++;
-   }
-
-   if (max == value.Temperature && maxCount <= 3) {
-    $("#maximumTemp").append('<p>', value.Timestamp, "</p>");
-    maxCount++;
-   }
 
    // Split timestamp into [ Y, M, D, h, m, s ]
    var t = value.Timestamp.split(/[- :]/);
    // Apply each element to the Date function
    var d = new Date(t[0], t[1] - 1, t[2], t[3], t[4], t[5]); //month: januari = 0, februari = 1,...
+
+
+   //min en max temp aanvullen met datum (vult enkel eerste datum in)
+   var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:"numeric",minute:"numeric" };
+   
+   if (min == value.Temperature && minCount <= 3) {
+    $("#minimumTemp").append('<p>', d.toLocaleDateString("en-US",options), "</p>");
+    minCount++;
+   }
+
+   if (max == value.Temperature && maxCount <= 3) {
+    $("#maximumTemp").append('<p>', d.toLocaleDateString("en-US",options), "</p>");
+    maxCount++;
+   }
+
 
    dataPoints.push({
     x: d,
@@ -74,7 +79,9 @@ window.onload = function () {
    data: [{
     type: "area",
     dataPoints: dataPoints,
-    toolTipContent: "Datum= {x} </br> Temperatuur= {y} °C"
+    xValueFormatString: "DD/MM/YYYY HH:mm",
+	yValueFormatString: "Temperatuur: #.## '°C'"
+    //toolTipContent: "Datum= {x} </br> Temperatuur= {y} °C"
                 }]
   });
   chart.render();
@@ -82,7 +89,7 @@ window.onload = function () {
  });
 
 
- $.getJSON("files/weatherdata.json", function (data) {
+ $.getJSON("files/weatherdata.json", function (data) { //overbodig, maar enkel op F12 drukken zorgt ervoor dat graph op scherm komt (?)
   var chart2 = new CanvasJS.Chart("chartContainer2", {
    zoomEnabled: true,
    title: {
@@ -90,7 +97,9 @@ window.onload = function () {
    },
    axisX: {
     title: "Timestamp",
-    valueFormatString: "HH:mm"
+    //valueFormatString: "HH:mm",
+    interval:1,
+    intervalType: "day"
    },
 
    axisY: {
@@ -100,7 +109,9 @@ window.onload = function () {
    data: [{
     type: "area",
     dataPoints: dataPoints2,
-    toolTipContent: "Datum= {x} </br> Vochtigheid= {y} %"
+    xValueFormatString: "DD/MM/YYYY HH:mm",
+	yValueFormatString: "Vochtigheid: ##'%'"
+    //toolTipContent: "Datum= {x} </br> Vochtigheid= {y} %"
                 }]
   });
 
