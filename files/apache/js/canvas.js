@@ -6,6 +6,7 @@ window.onload = function () {
  $("#extra h4").hide();
 
     $("#btnExtra").click(function(){
+      ($(this).text()==="Toon extra informatie"? $("#btnExtra").text("Verberg extra informatie"):$("#btnExtra").text("Toon extra informatie"));
          $("#extra h4").toggle();
     });
 
