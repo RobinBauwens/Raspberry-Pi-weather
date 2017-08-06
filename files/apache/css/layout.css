@@ -12,6 +12,17 @@ hr {
  width: 100px;
 }
 
+.btn-orange {
+ margin: 10px 1px;
+ color: white;
+ background-color: #F05F40;
+ padding: 12px;
+ border-radius: 30px;
+ font-size: 10px;
+ text-transform: uppercase;
+ font-weight: 500;
+}
+
 #copyright {
  margin-right: 20px;
  margin-top: -5px;

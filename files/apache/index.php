@@ -40,7 +40,8 @@ echo '<h4>UPTIME: ',$days,($days==1?' dag, ':' dagen, '),$hours,($hours==1?' uur
 //date('i') geeft minuten terug, date('s') geeft seconden terug (lokale tijd, niet tijd na uptime!)
 
 //$cmd='ping -c 10 127.0.0.1';
-echo '<br>';
+
+//echo '<br>';
 
 echo '<h4>';
 system('./files/ram.sh 2>&1'); //geen echo erbij, herhaalt onnodig uitvoer dan
