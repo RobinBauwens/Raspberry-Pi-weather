@@ -40,6 +40,9 @@
 `TZ="Europe/Brussels"`
 
 `0,30 * * * * /usr/bin/python /home/pi/mysqltest.py`
+
+`00 00 * * * /home/pi/CopyData_DeleteFirst200Records.sh`
+
 -->
 
 - Naamgeving `mysqltest.py` aanpassen.
