@@ -28,6 +28,18 @@
 
 - [Format Date JS](https://stackoverflow.com/questions/3552461/how-to-format-a-javascript-date)
 
+- [VIM Search](http://vim.wikia.com/wiki/Searching)
+
+- [MySQL alias derived table](https://stackoverflow.com/questions/3363918/mysql-error-1248-42000-every-derived-table-must-have-its-own-alias)
+
+- [MySQL probleem subquery: delete op zelfde tabel als innerquery](https://stackoverflow.com/questions/45494/mysql-error-1093-cant-specify-target-table-for-update-in-from-clause/45498#45498)
+
+- [MySQL probleem (2)][https://stackoverflow.com/questions/43171583/table-name-specified-twice-both-as-a-target-for-update-and-separate-source-for-d)
+
+- [Verwijderen dubbele tekst BASH][https://stackoverflow.com/questions/9377040/remove-duplicate-entries-using-a-bash-script)
+
+- [Auto login MySQL][https://stackoverflow.com/questions/13814413/how-to-auto-login-mysql-in-shell-scripts)
+
 ## PHP
 
 - [MySQL via PHP naar JSON](https://www.youtube.com/watch?v=CZ8PdfVZTCQ)
