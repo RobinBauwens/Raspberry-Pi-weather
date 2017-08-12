@@ -42,6 +42,8 @@
 
 - [Crontab not running (new line)](https://askubuntu.com/questions/23009/why-crontab-scripts-are-not-working)
 
+- [Crontab daily reboot](https://askubuntu.com/questions/237290/daily-server-reboot-cron)
+
 ## PHP
 
 - [MySQL via PHP naar JSON](https://www.youtube.com/watch?v=CZ8PdfVZTCQ)

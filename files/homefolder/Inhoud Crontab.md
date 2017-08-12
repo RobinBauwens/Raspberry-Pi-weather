@@ -9,7 +9,6 @@ Let op:
 <!--
 ## Voorbeeld inhoud (zie commentaar):
 
-
 # Edit this file to introduce tasks to be run by cron.
 #
 # Each task to run has to be defined through a single line
@@ -39,6 +38,8 @@ TZ="Europe/Brussels"
 0,30 * * * * /usr/bin/python /home/pi/mysqltest.py
 
 00 16 * * * /bin/bash /home/pi/CopyData_DeleteFirst200Records
+
+15 00 * * * /sbin/shutdown -r now
 
 -->
 
