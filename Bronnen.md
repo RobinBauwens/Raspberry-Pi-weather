@@ -34,11 +34,13 @@
 
 - [MySQL probleem subquery: delete op zelfde tabel als innerquery](https://stackoverflow.com/questions/45494/mysql-error-1093-cant-specify-target-table-for-update-in-from-clause/45498#45498)
 
-- [MySQL probleem (2)][https://stackoverflow.com/questions/43171583/table-name-specified-twice-both-as-a-target-for-update-and-separate-source-for-d)
+- [MySQL probleem (2)](https://stackoverflow.com/questions/43171583/table-name-specified-twice-both-as-a-target-for-update-and-separate-source-for-d)
 
-- [Verwijderen dubbele tekst BASH][https://stackoverflow.com/questions/9377040/remove-duplicate-entries-using-a-bash-script)
+- [Verwijderen dubbele tekst BASH](https://stackoverflow.com/questions/9377040/remove-duplicate-entries-using-a-bash-script)
 
-- [Auto login MySQL][https://stackoverflow.com/questions/13814413/how-to-auto-login-mysql-in-shell-scripts)
+- [Auto login MySQL](https://stackoverflow.com/questions/13814413/how-to-auto-login-mysql-in-shell-scripts)
+
+- [Crontab not running (new line)](https://askubuntu.com/questions/23009/why-crontab-scripts-are-not-working)
 
 ## PHP
 
