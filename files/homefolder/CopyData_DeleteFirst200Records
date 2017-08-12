@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sudo cat /var/www/html/files/weatherdata.json >> /home/pi/backup.json
+awk '!a[$0]++' /home/pi/backup.json > ~/uniquedata.json
+
+  DB_USER='root'
+  DB_PASS='mariadb-password'
+  echo 'logging into DB $DB as $DB_USER'
+  mysql -u "$DB_USER" --password="$DB_PASS" < /home/pi/DeleteFirst200Records.sql
+ 
