@@ -10,6 +10,6 @@ awk '!a[$0]++' ~/backup.json > uniquedata.json
   DB_USER='root'
   DB_PASS='mariadb-password'
   echo 'logging into DB $DB as $DB_USER'
-  mysql -u "$DB_USER" --password="$DB_PASS" < DeleteFirst200Records.sql
+  mysql -u "$DB_USER" --password="$DB_PASS" < /home/pi/DeleteFirst200Records.sql
 
 # https://stackoverflow.com/questions/13814413/how-to-auto-login-mysql-in-shell-scripts
