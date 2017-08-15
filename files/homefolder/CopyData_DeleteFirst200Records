@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo cat /var/www/html/files/weatherdata.json >> /home/pi/backup.json
+sudo echo >> /home/pi/backup.json
 awk '!a[$0]++' /home/pi/backup.json > ~/uniquedata.json
 
   DB_USER='root'
