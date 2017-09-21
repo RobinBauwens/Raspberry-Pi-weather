@@ -44,9 +44,9 @@
 `00 00 * * * /home/pi/CopyData_DeleteFirst200Records.sh`
 
 -->
-
+<!---
 - Naamgeving `mysqltest.py` aanpassen.
-<!--- Toevoegen foto's.
+ Toevoegen foto's.
  - Scheiden JS en PHP + lay-out CSS -->
 
 ### Werking
@@ -67,9 +67,11 @@ DB (MySQL) werd gebruikt om LAMP-stack te simuleren.
 
 ### Demo
 
-![Voorbeeld](img/voorbeeld.JPG)
+![Voorbeeld (enkel om verbinding te tonen)](img/voorbeeld.JPG)
 
 ![Opstelling](img/Opstelling.JPG)
+
+Met isolatietape om te voorkomen dat de draden makkelijk loskomen.
 
 ![Laatste versie](img/laatsteversie.PNG)
 
