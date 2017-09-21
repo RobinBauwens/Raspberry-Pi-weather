@@ -67,20 +67,14 @@ DB (MySQL) werd gebruikt om LAMP-stack te simuleren.
 
 ### Demo
 
-![Demo (dummydata)](img/demo.PNG)
-
-![Demo (echte data)](img/echtedata.PNG)
-
 ![Voorbeeld](img/voorbeeld.JPG)
 
-![Opstelling](img/opstelling1.JPG)
-
-![Opstelling](img/opstelling2.JPG)
-
-![Opstelling](img/opstelling3.JPG)
+![Opstelling](img/opstelling.jpg)
 
 ![Laatste versie](img/laatsteversie.PNG)
 
 ![Echte laatste versie](img/laatsteversie2.PNG)
 
 ![Echte laatste versie 2](img/laatsteversie2.1.PNG)
+
+![Echte echte laatste versie 3](img/laatsteversie3.PNG)
