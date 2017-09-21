@@ -10,7 +10,7 @@
 
 ## Benodigdheden DS18B20: temperatuur
 
-- [Raspberry Pi 3 model B (of andere versie met GPIO-pinnen](https://www.sossolutions.nl/raspberry-pi-3b?gclid=EAIaIQobChMIxdKmvI671QIVQ54bCh315gqsEAAYASAAEgKF0vD_BwE)
+- [Raspberry Pi 3 model B (of andere versie met GPIO-pinnen)](https://www.sossolutions.nl/raspberry-pi-3b?gclid=EAIaIQobChMIxdKmvI671QIVQ54bCh315gqsEAAYASAAEgKF0vD_BwE)
 - [DS18B20](https://www.sossolutions.nl/374-ds18b20-digital-temperature-sensor-extras)
 - [Breadboard](https://www.sossolutions.nl/half-size-breadboard)
 - [Micro SD-kaart 16GB](https://www.sossolutions.nl/16gb-sandisk-ultra-micro-sdhc-80mb-s)
@@ -20,7 +20,7 @@
 
 ## Benodigdheden AM2302: temperatuur & luchtvochtigheid
 
-- [Raspberry Pi 3 model B (of andere versie met GPIO-pinnen](https://www.sossolutions.nl/raspberry-pi-3b?gclid=EAIaIQobChMIxdKmvI671QIVQ54bCh315gqsEAAYASAAEgKF0vD_BwE)
+- [Raspberry Pi 3 model B (of andere versie met GPIO-pinnen)](https://www.sossolutions.nl/raspberry-pi-3b?gclid=EAIaIQobChMIxdKmvI671QIVQ54bCh315gqsEAAYASAAEgKF0vD_BwE)
 - [AM2302](https://www.sossolutions.nl/393-am2302-wired-dht22-temperature-humidity-sensor)
 - [Micro SD-kaart 16GB](https://www.sossolutions.nl/16gb-sandisk-ultra-micro-sdhc-80mb-s)
 - [Female/Female jumperwires](https://www.sossolutions.nl/premium-female-female-jumper-wires-40-x-6)
@@ -51,11 +51,11 @@
 
 ### Werking
 
-Dit project werkt gemaakt om de temperatuur (en luchtvochtigheid) te meten a.d.h.v. sensoren (DS18B20 & AM2302). De gemeten waarden worden opgevraagd via `mysqltest.py`. Dit script zal ook een MySQL-database `WeatherStation` met tabel `WeatherData` aanmaken indien deze nog niet bestaat (zie bestand `createTable.sql`). Vervolgens zal het script de tabel aanvullen (kolommen `ID`, `Temperature` (float met 1 cijfer na de komma), `Humidity` (int voor percentage), `Timestamp`).
+Dit project werd gemaakt om de temperatuur (en luchtvochtigheid) te meten a.d.h.v. sensoren (DS18B20 & AM2302). De gemeten waarden worden opgevraagd via `mysqltest.py`. Dit script zal ook een MySQL-database `WeatherStation` met tabel `WeatherData` aanmaken indien deze nog niet bestaat (zie bestand `createTable.sql`). Vervolgens zal het script de tabel aanvullen (kolommen: `ID`, `Temperature` (float met 1 cijfer na de komma), `Humidity` (int voor percentage), `Timestamp`).
 
 Via een `crontab`-entry zal het script automatisch om de 30 minuten aangeroepen worden. Ook zal er iedere dag om 16:00 een backup genomen worden van `weatherdata.json` en een aantal records verwijderd worden zodat er na het uitvoeren van de SQL-commando's 200 overblijven (er zijn 48 records nodig om alle data van 1 dag bij te houden). Ten slotte zal er dagelijks om 00:15 een reboot plaatsvinden om de RAM vrij te maken.
 
-In `/var/www/html/` (Apache) zal je de `index.php` vinden (bij mij `http://192.168.0.110/index.php`; indien er in je `html`-directory geen andere index-bestanden zitten kan je ook `http://192.168.0.110` gebruiken). Indien je dit bestand opent in je browser dan zal er verbinding gemaakt worden met de databank en een `weatherdata.json`-bestand aangemaakt worden in `/var/www/html/`. Het PHP-bestand bevat ook een referentie naar een HTML-bestand die wat JavaScript-code aanroept (incl. jQuery en CanvasJS) om de 2 canvassen aan te maken met daarin eenerzijds de gemeten temperatuur + timestamp en anderzijds de gemeten luchtvochtigheid + timestamp. Verder zorgt de CSS voor de extra opmaak van de webpagina.
+In `/var/www/html/` (Apache) zal je de `index.php` vinden (indien er in je `html`-directory geen andere index-bestanden zitten kan je ook `http://192.168.0.110` gebruiken). Indien je dit bestand opent in je browser dan zal er verbinding gemaakt worden met de databank en een `weatherdata.json`-bestand aangemaakt worden in `/var/www/html/`. Het PHP-bestand bevat ook een referentie naar een HTML-bestand die wat JavaScript-code aanroept (incl. jQuery en CanvasJS) om de 2 canvassen aan te maken met daarin eenerzijds de gemeten temperatuur + timestamp en anderzijds de gemeten luchtvochtigheid + timestamp. Verder zorgt de CSS voor de extra opmaak van de webpagina.
 
 
 ### Werking TL;DR
