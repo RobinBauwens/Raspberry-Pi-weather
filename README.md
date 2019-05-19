@@ -60,9 +60,9 @@ In `/var/www/html/` (Apache) zal je de `index.php` vinden (indien er in je `html
 
 ### Werking TL;DR
 
-Sensors -> Python -> MySQL -> PHP -> Data (JSON) -> HTML & JS ->  kewl graphs
+Sensors -> Python -> MySQL -> PHP -> Data (JSON) -> HTML & JS ->  cool graphs
 
-DB (MySQL) werd gebruikt om LAMP-stack te simuleren.
+De databank (MySQL) werd gebruikt om zo een LAMP-stack te simuleren.
 
 
 ### Demo
